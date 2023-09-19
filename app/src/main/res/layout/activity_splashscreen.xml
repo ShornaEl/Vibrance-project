@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:background="@color/cardview_dark_background"
+    tools:context=".splashscreen">
+
+    <TextView
+        android:id="@+id/welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:text="Welcome"
+        android:textColor="#000000"
+        android:textSize="60dp"
+        android:textStyle="bold"
+
+
+        />
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/my_anim"
+        />
+    <TextView
+        android:id="@+id/psycho"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text = "Vibrance"
+        android:textColor="#000000"
+        android:textSize="40sp"
+        android:textStyle="italic"
+        android:layout_gravity="center"
+
+
+        />
+
+      <TextView
+          android:id="@+id/text"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Simple solution of complex mental problem"
+          android:textStyle="normal"
+          android:textSize="20dp"
+          android:layout_gravity="center"
+          />
+
+</LinearLayout>

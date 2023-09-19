@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/cardview_dark_background"
+    android:layout_height="match_parent"
+    tools:context=".Main_page">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="191dp"
+        android:layout_height="218dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="124dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/img_3" />
+
+    <Button
+        android:id="@+id/stress_btn"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:text="Calcuate Stress"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+        app:layout_constraintEnd_toEndOf="@+id/imageView3"
+        app:layout_constraintStart_toStartOf="@+id/imageView3"
+        app:shapeAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Subtitle" />
+    <Button
+        android:id="@+id/focus_btn"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:text="Calcuate Focus"
+        app:layout_constraintBottom_toBottomOf="@+id/focus"
+        app:layout_constraintEnd_toEndOf="@+id/focus"
+        app:layout_constraintStart_toStartOf="@+id/focus"
+        app:shapeAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Subtitle" />
+
+    <ImageView
+        android:id="@+id/focus"
+        android:layout_width="191dp"
+        android:layout_height="218dp"
+        android:layout_marginTop="128dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView3"
+        app:layout_constraintTop_toTopOf="@+id/imageView3"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/focus1" />
+    <Button
+        android:id="@+id/emotion_btn"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:text="Calcuate Emotion"
+        app:layout_constraintBottom_toBottomOf="@+id/emotion"
+        app:layout_constraintEnd_toEndOf="@+id/emotion"
+        app:layout_constraintStart_toStartOf="@+id/emotion"
+        app:shapeAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Subtitle" />
+
+    <ImageView
+        android:id="@+id/emotion"
+        android:layout_width="191dp"
+        android:layout_height="218dp"
+
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView3"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/imageView3"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        app:srcCompat="@drawable/emtion1" />
+
+    <Button
+        android:id="@+id/happiness_btn"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:text="Calcuate Happiness"
+        app:layout_constraintBottom_toBottomOf="@+id/happiness"
+        app:layout_constraintEnd_toEndOf="@id/happiness"
+        app:layout_constraintStart_toStartOf="@id/happiness"
+        app:shapeAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Subtitle" />
+
+    <ImageView
+        android:id="@+id/happiness"
+        android:layout_width="191dp"
+        android:layout_height="218dp"
+
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="@+id/focus"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/imageView3"
+        app:layout_constraintTop_toBottomOf="@+id/focus_btn"
+        app:srcCompat="@drawable/happiness" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
