@@ -38,6 +38,14 @@ public class Stresslevel extends AppCompatActivity {
                     stressLevel += 1;
                 }
             }
+            RadioGroup question2RadioGroup = findViewById(R.id.question2RadioGroup);
+            int question2SelectedId = question2RadioGroup.getCheckedRadioButtonId();
+            if (question2SelectedId != -1) {
+                RadioButton question2SelectedRadioButton = findViewById(question2SelectedId);
+                if (question2SelectedRadioButton.getText().equals("Yes")) {
+                    stressLevel += 1;
+                }
+            }
 
             // Add more questions and calculations for each question here
 
