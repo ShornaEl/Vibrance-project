@@ -67,7 +67,7 @@ public class Stresslevel extends AppCompatActivity {
 
     // Display the calculated stress level
     private void displayStressLevel() {
-        TextView stressLevelTextView = findViewById(R.id.stressLevelTextView);
+        TextView stressLevelTextView = findViewById(R.id.Final_stresslevel);
         stressLevelTextView.setText("Stress Level: " + stressLevel);
     }
 }
