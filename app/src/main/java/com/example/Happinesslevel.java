@@ -11,23 +11,23 @@ import android.widget.Toast;
 
 import com.example.vibrance.R;
 
-public class Emotionlevel extends AppCompatActivity {
+public class Happinesslevel extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_emotionlevel);
+        setContentView(R.layout.activity_happinesslevel);
         Button calculateButton = findViewById(R.id.calculateButton);
         calculateButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                calculateEmotionLevel();
+                calculateHappinessLevel();
             }
         });
     }
 
-    private void calculateEmotionLevel() {
-        int emotionLevel = 0;
+    private void calculateHappinessLevel() {
+        int happinesslevel = 0;
 
         // Question 1
         RadioGroup question1RadioGroup = findViewById(R.id.question1RadioGroup);
@@ -35,7 +35,7 @@ public class Emotionlevel extends AppCompatActivity {
         if (question1SelectedId != -1) {
             RadioButton question1SelectedRadioButton = findViewById(question1SelectedId);
             if (question1SelectedRadioButton.getText().equals("Yes")) {
-                emotionLevel += 1;
+                happinesslevel += 1;
             }
         }
         RadioGroup question2RadioGroup = findViewById(R.id.question2RadioGroup);
@@ -43,14 +43,14 @@ public class Emotionlevel extends AppCompatActivity {
         if (question2SelectedId != -1) {
             RadioButton question2SelectedRadioButton = findViewById(question2SelectedId);
             if (question2SelectedRadioButton.getText().equals("Yes")) {
-                emotionLevel += 1;
+                happinesslevel += 1;
             }
         }
 
         // Add more questions and calculations for each question here
 
         // Display the calculated stress level
-        String message = "Your stress level is: " + emotionLevel;
+        String message = "Your stress level is: " + happinesslevel;
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
     }
 }
