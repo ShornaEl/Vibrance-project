@@ -2,6 +2,7 @@ package com.example;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -18,26 +19,34 @@ public class Focus_level extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_focus_level);
         Button calculateButton = findViewById(R.id.calculateButton);
+        Intent intent = new Intent(Focus_level.this, focuslevel2.class);
         calculateButton.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View view) {
-                calculateFocusLevel();
+               int x = calculateFocusLevel();
+               intent.putExtra("IntValue",x);
+               startActivity(intent);
             }
         });
     }
 
-    private void calculateFocusLevel() {
+
+    private  int calculateFocusLevel() {
         int focusLevel = 0;
+
+
 
         // Question 1
         RadioGroup question1RadioGroup = findViewById(R.id.question1RadioGroup);
         int question1SelectedId = question1RadioGroup.getCheckedRadioButtonId();
         if (question1SelectedId != -1) {
             RadioButton question1SelectedRadioButton = findViewById(question1SelectedId);
-            if (question1SelectedRadioButton.getText().equals("Yes")) {
+            if (question1SelectedRadioButton.getText().equals("No")) {
                 focusLevel += 1;
             }
         }
+        //Question2
         RadioGroup question2RadioGroup = findViewById(R.id.question2RadioGroup);
         int question2SelectedId = question2RadioGroup.getCheckedRadioButtonId();
         if (question2SelectedId != -1) {
@@ -46,11 +55,28 @@ public class Focus_level extends AppCompatActivity {
                 focusLevel += 1;
             }
         }
-
-        // Add more questions and calculations for each question here
-
-        // Display the calculated stress level
-        String message = "Your stress level is: " + focusLevel;
-        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
+        RadioGroup question3RadioGroup = findViewById(R.id.question3RadioGroup);
+        int question3SelectedId = question3RadioGroup.getCheckedRadioButtonId();
+        if (question3SelectedId != -1) {
+            RadioButton question3SelectedRadioButton = findViewById(question3SelectedId);
+            if (question3SelectedRadioButton.getText().equals("Yes")) {
+                focusLevel += 1;
+            }
+        }
+        RadioGroup question4RadioGroup = findViewById(R.id.question4RadioGroup);
+        int question4SelectedId = question4RadioGroup.getCheckedRadioButtonId();
+        if (question4SelectedId != -1) {
+            RadioButton question4SelectedRadioButton = findViewById(question4SelectedId);
+            if (question4SelectedRadioButton.getText().equals("No")) {
+                focusLevel += 1;
+            }
+        }
+        return focusLevel;
     }
-}
+
+
+
+}            // Add more questions and calculations for each question her// Display the calculated stress lev
+
+
+

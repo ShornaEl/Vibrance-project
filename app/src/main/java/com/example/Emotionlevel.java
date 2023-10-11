@@ -50,7 +50,5 @@ public class Emotionlevel extends AppCompatActivity {
         // Add more questions and calculations for each question here
 
         // Display the calculated stress level
-        String message = "Your stress level is: " + emotionLevel;
-        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
     }
 }

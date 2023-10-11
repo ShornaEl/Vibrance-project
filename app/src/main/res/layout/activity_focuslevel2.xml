@@ -4,12 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.Focus_level">
+    tools:context="com.example.focuslevel2">
     <TextView
         android:id="@+id/question1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Are you easily distracted by external noises or movements around you?"
+        android:text="Is it common for you to daydream or lose track of what you're doing?"
         android:textSize="16sp" />
 
     <RadioGroup
@@ -35,7 +35,7 @@
         android:id="@+id/question2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Can you maintain your attention on a single task for an extended period?"
+        android:text="Do you use time management techniques to stay on track with your tasks?"
         android:textSize="16sp"
         android:layout_below="@id/question1RadioGroup"
         android:layout_margin="16dp"/>
@@ -63,7 +63,7 @@
         android:id="@+id/question3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=" Do you complete tasks or assignments without getting sidetracked?"
+        android:text=" Do you often check your phone or social media while trying to work?"
         android:textSize="16sp"
         android:layout_below="@id/question2RadioGroup"
         android:layout_margin="16dp"/>
@@ -91,7 +91,7 @@
         android:id="@+id/question4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=" Do you feel a sense of accomplishment after concentrating on a task for a while?"
+        android:text="Are you able to ignore background noise or other disruptions when you need to focus?"
         android:textSize="16sp"
         android:layout_below="@id/question3RadioGroup"
         android:layout_margin="16dp"/>
@@ -132,6 +132,5 @@
         android:layout_centerHorizontal="true"
         android:layout_below="@id/question4RadioGroup"
         android:layout_marginTop="16dp"
-        android:text="Next" />
+        android:text="Calculate Focus" />
 </RelativeLayout>
-

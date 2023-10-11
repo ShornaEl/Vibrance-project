@@ -9,6 +9,7 @@ import android.widget.Button;
 
 import com.example.Emotionlevel;
 import com.example.Focus_level;
+import com.example.Happinesslevel;
 import com.example.Stresslevel;
 
 public class Main_page extends AppCompatActivity {
@@ -53,7 +54,7 @@ public class Main_page extends AppCompatActivity {
             }
         });
         Intent happiness;
-        happiness = new Intent(Main_page.this, Emotionlevel.class);
+        happiness = new Intent(Main_page.this, Happinesslevel.class);
 
         //  login_dashboard = new Intent(MainActivity.this, splashscreen.class);
         happines_btn.setOnClickListener(new View.OnClickListener() {
