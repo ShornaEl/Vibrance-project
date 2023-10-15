@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.Emtionlevel2">
+    <TextView
+        android:id="@+id/question1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Are you generally satisfied with your life right now?"
+        android:textSize="16sp" />
+
+    <RadioGroup
+        android:id="@+id/question1RadioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/question1"
+        android:layout_marginTop="8dp">
+
+        <RadioButton
+            android:id="@+id/question1Yes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Yes" />
+
+        <RadioButton
+            android:id="@+id/question1No"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No" />
+    </RadioGroup>
+    <TextView
+        android:id="@+id/question2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Did something specific trigger your current emotional state?"
+        android:textSize="16sp"
+        android:layout_below="@id/question1RadioGroup"
+        android:layout_margin="16dp"/>
+
+    <RadioGroup
+        android:id="@+id/question2RadioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/question2"
+        android:layout_marginTop="8dp">
+
+        <RadioButton
+            android:id="@+id/question2Yes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Yes" />
+
+        <RadioButton
+            android:id="@+id/question2No"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No" />
+    </RadioGroup>
+    <TextView
+        android:id="@+id/question3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Have you feeling overwhelmed by emtions recently?"
+        android:textSize="16sp"
+        android:layout_below="@id/question2RadioGroup"
+        android:layout_margin="16dp"/>
+
+    <RadioGroup
+        android:id="@+id/question3RadioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/question3"
+        android:layout_marginTop="8dp">
+
+        <RadioButton
+            android:id="@+id/question3Yes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Yes" />
+
+        <RadioButton
+            android:id="@+id/question3No"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No" />
+    </RadioGroup>
+    <TextView
+        android:id="@+id/question4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Do you always overthink with the relation  you emotionally connected?"
+        android:textSize="16sp"
+        android:layout_below="@id/question3RadioGroup"
+        android:layout_margin="16dp"/>
+
+    <RadioGroup
+        android:id="@+id/question4RadioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/question4"
+        android:layout_marginTop="8dp">
+
+        <RadioButton
+            android:id="@+id/question4Yes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Yes" />
+
+        <RadioButton
+            android:id="@+id/question4No"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No" />
+    </RadioGroup>
+
+
+
+
+
+
+
+
+    <!-- Add more questions and radio buttons as needed -->
+
+    <Button
+        android:id="@+id/calculateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/question4RadioGroup"
+        android:layout_marginTop="16dp"
+        android:text="Calculate Focus" />
+</RelativeLayout>
+
