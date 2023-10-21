@@ -5,122 +5,214 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/cardview_dark_background"
+    android:backgroundTint="@color/bgcolor"
     tools:context=".Main_page">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="68dp"
-        android:text="How are you Today"
-        android:textColor="@color/design_default_color_background"
-        android:textSize="20dp"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView7"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="15dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="70dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="191dp"
-        android:layout_height="218dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="124dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/img_3" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/headergradient">
 
-    <Button
-        android:id="@+id/stress_btn"
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="How Are You\nToday?"
+                android:textColor="@color/white"
+                android:textSize="34sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="40dp"
+                android:src="@drawable/humanbrain"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.285" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView5"
         android:layout_width="180dp"
-        android:layout_height="wrap_content"
-        android:text="Calcuate Stress"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
-        app:layout_constraintEnd_toEndOf="@+id/imageView3"
-        app:layout_constraintStart_toStartOf="@+id/imageView3"
-        app:shapeAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Subtitle" />
-
-    <Button
-        android:id="@+id/focus_btn"
-        android:layout_width="180dp"
-        android:layout_height="wrap_content"
-        android:text="Calcuate Focus"
-        app:layout_constraintBottom_toBottomOf="@+id/focus"
-        app:layout_constraintEnd_toEndOf="@+id/focus"
-        app:layout_constraintStart_toStartOf="@+id/focus"
-        app:shapeAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Subtitle" />
-
-    <ImageView
-        android:id="@+id/focus"
-        android:layout_width="191dp"
-        android:layout_height="218dp"
-        android:layout_marginTop="128dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+        android:layout_height="220dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="12dp"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="70dp"
+        app:layout_constraintBottom_toTopOf="@+id/cardView6"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView3"
-        app:layout_constraintTop_toTopOf="@+id/imageView3"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/focus1" />
-
-    <Button
-        android:id="@+id/emotion_btn"
-        android:layout_width="180dp"
-        android:layout_height="wrap_content"
-        android:text="Calcuate Emotion"
-        app:layout_constraintBottom_toBottomOf="@+id/emotion"
-        app:layout_constraintEnd_toEndOf="@+id/emotion"
-        app:layout_constraintStart_toStartOf="@+id/emotion"
-        app:shapeAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Subtitle" />
-
-    <ImageView
-        android:id="@+id/emotion"
-        android:layout_width="191dp"
-        android:layout_height="218dp"
-
-        android:layout_marginTop="12dp"
-        app:layout_constraintEnd_toEndOf="@+id/imageView3"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/imageView3"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3"
-        app:srcCompat="@drawable/emtion1" />
+        app:layout_constraintStart_toEndOf="@+id/cardView2">
 
-    <Button
-        android:id="@+id/happiness_btn"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="182dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/gradientcard">
+
+            <Button
+                android:id="@+id/focus_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rectaglestrok"
+                android:text="Take a test"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/focus"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Focus"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView6"
         android:layout_width="180dp"
-        android:layout_height="50dp"
-        android:text="Calcuate Happiness"
-        app:layout_constraintBottom_toBottomOf="@+id/happiness"
-        app:layout_constraintEnd_toEndOf="@id/happiness"
-        app:layout_constraintStart_toStartOf="@id/happiness"
-        app:shapeAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Subtitle" />
+        android:layout_height="220dp"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="70dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cardView4"
+        app:layout_constraintEnd_toEndOf="@+id/cardView5">
 
-    <ImageView
-        android:id="@+id/happiness"
-        android:layout_width="191dp"
-        android:layout_height="218dp"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="181dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/gradientcard">
 
-        android:layout_marginTop="12dp"
-        app:layout_constraintEnd_toEndOf="@+id/focus"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/imageView3"
-        app:layout_constraintTop_toBottomOf="@+id/focus_btn"
-        app:srcCompat="@drawable/happiness" />
+            <Button
+                android:id="@+id/happiness_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rectaglestrok"
+                android:text="Take a test"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/textView2"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Home"
-        app:layout_constraintEnd_toStartOf="@+id/button3"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Mood"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
 
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Details"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="180dp"
+        android:layout_height="220dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="12dp"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="70dp"
+        app:layout_constraintBottom_toTopOf="@+id/cardView4"
+        app:layout_constraintStart_toStartOf="parent">
 
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/gradientcard">
 
+            <Button
+                android:id="@+id/stress_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rectaglestrok"
+                android:text="Take a test"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Stress"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView4"
+        android:layout_width="180dp"
+        android:layout_height="220dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="68dp"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="70dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/cardView6"
+        app:layout_constraintHorizontal_bias="0.843"
+        app:layout_constraintStart_toStartOf="@+id/cardView2">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/gradientcard">
+
+            <Button
+                android:id="@+id/emotion_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rectaglestrok"
+                android:text="Take a test"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Emotion"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

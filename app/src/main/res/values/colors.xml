@@ -3,4 +3,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="fffffff">#AA24A3</color>
+    <color name ="cardstart">#5432a8</color>
+    <color name = "cardend">#6d32a8</color>
+    <color name = "bgcolor">#543b8a</color>
 </resources>

@@ -18,15 +18,15 @@ public class Focus_level extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_focus_level);
-        Button calculateButton = findViewById(R.id.calculateButton);
+        Button submit_btn = findViewById(R.id.submit_btn);
         Intent intent = new Intent(Focus_level.this, focuslevel2.class);
-        calculateButton.setOnClickListener(new View.OnClickListener() {
+        submit_btn.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
-               int x = calculateFocusLevel();
-               intent.putExtra("IntValue",x);
-               startActivity(intent);
+                int x = calculateFocusLevel();
+                intent.putExtra("IntValue",x);
+                startActivity(intent);
             }
         });
     }
@@ -68,6 +68,38 @@ public class Focus_level extends AppCompatActivity {
         if (question4SelectedId != -1) {
             RadioButton question4SelectedRadioButton = findViewById(question4SelectedId);
             if (question4SelectedRadioButton.getText().equals("No")) {
+                focusLevel += 1;
+            }
+        }
+        RadioGroup question5RadioGroup = findViewById(R.id.question5RadioGroup);
+        int question5SelectedId = question5RadioGroup.getCheckedRadioButtonId();
+        if (question5SelectedId != -1) {
+            RadioButton question5SelectedRadioButton = findViewById(question5SelectedId);
+            if (question5SelectedRadioButton.getText().equals("No")) {
+                focusLevel += 1;
+            }
+        }
+        RadioGroup question6RadioGroup = findViewById(R.id.question6RadioGroup);
+        int question6SelectedId = question6RadioGroup.getCheckedRadioButtonId();
+        if (question6SelectedId != -1) {
+            RadioButton question6SelectedRadioButton = findViewById(question6SelectedId);
+            if (question6SelectedRadioButton.getText().equals("No")) {
+                focusLevel += 1;
+            }
+        }
+        RadioGroup question7RadioGroup = findViewById(R.id.question7RadioGroup);
+        int question7SelectedId = question7RadioGroup.getCheckedRadioButtonId();
+        if (question7SelectedId != -1) {
+            RadioButton question7SelectedRadioButton = findViewById(question7SelectedId);
+            if (question7SelectedRadioButton.getText().equals("No")) {
+                focusLevel += 1;
+            }
+        }
+        RadioGroup question8RadioGroup = findViewById(R.id.question8RadioGroup);
+        int question8SelectedId = question8RadioGroup.getCheckedRadioButtonId();
+        if (question8SelectedId != -1) {
+            RadioButton question8SelectedRadioButton = findViewById(question8SelectedId);
+            if (question8SelectedRadioButton.getText().equals("No")) {
                 focusLevel += 1;
             }
         }

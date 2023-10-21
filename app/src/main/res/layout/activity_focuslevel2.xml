@@ -1,136 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.focuslevel2">
+    tools:context="com.example.focuslevel2"
+    android:background="@drawable/rectanglebackgroun">
+
     <TextView
-        android:id="@+id/question1"
+        android:id="@+id/focus_value"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Is it common for you to daydream or lose track of what you're doing?"
-        android:textSize="16sp" />
-
-    <RadioGroup
-        android:id="@+id/question1RadioGroup"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/question1"
-        android:layout_marginTop="8dp">
-
-        <RadioButton
-            android:id="@+id/question1Yes"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Yes" />
-
-        <RadioButton
-            android:id="@+id/question1No"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="No" />
-    </RadioGroup>
-    <TextView
-        android:id="@+id/question2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Do you use time management techniques to stay on track with your tasks?"
-        android:textSize="16sp"
-        android:layout_below="@id/question1RadioGroup"
-        android:layout_margin="16dp"/>
-
-    <RadioGroup
-        android:id="@+id/question2RadioGroup"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/question2"
-        android:layout_marginTop="8dp">
-
-        <RadioButton
-            android:id="@+id/question2Yes"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Yes" />
-
-        <RadioButton
-            android:id="@+id/question2No"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="No" />
-    </RadioGroup>
-    <TextView
-        android:id="@+id/question3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=" Do you often check your phone or social media while trying to work?"
-        android:textSize="16sp"
-        android:layout_below="@id/question2RadioGroup"
-        android:layout_margin="16dp"/>
-
-    <RadioGroup
-        android:id="@+id/question3RadioGroup"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/question3"
-        android:layout_marginTop="8dp">
-
-        <RadioButton
-            android:id="@+id/question3Yes"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Yes" />
-
-        <RadioButton
-            android:id="@+id/question3No"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="No" />
-    </RadioGroup>
-    <TextView
-        android:id="@+id/question4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Are you able to ignore background noise or other disruptions when you need to focus?"
-        android:textSize="16sp"
-        android:layout_below="@id/question3RadioGroup"
-        android:layout_margin="16dp"/>
-
-    <RadioGroup
-        android:id="@+id/question4RadioGroup"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/question4"
-        android:layout_marginTop="8dp">
-
-        <RadioButton
-            android:id="@+id/question4Yes"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Yes" />
-
-        <RadioButton
-            android:id="@+id/question4No"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="No" />
-    </RadioGroup>
-
-
-
-
-
-
-
-
-    <!-- Add more questions and radio buttons as needed -->
-
-    <Button
-        android:id="@+id/calculateButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/question4RadioGroup"
-        android:layout_marginTop="16dp"
-        android:text="Calculate Focus" />
-</RelativeLayout>
+        android:text="TextView"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.337" />
+</androidx.constraintlayout.widget.ConstraintLayout>
