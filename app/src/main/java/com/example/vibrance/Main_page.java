@@ -6,11 +6,15 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.example.Emotionlevel;
 import com.example.Focus_level;
 import com.example.Happinesslevel;
 import com.example.Stresslevel;
+
+import java.text.DateFormat;
+import java.util.Calendar;
 
 public class Main_page extends AppCompatActivity {
 
@@ -22,6 +26,10 @@ public class Main_page extends AppCompatActivity {
          Button focus_btn = (Button) findViewById(R.id.focus_btn);
         Button emtion_btn = (Button) findViewById(R.id.emotion_btn);
         Button happines_btn = (Button) findViewById(R.id.happiness_btn);
+        TextView text = findViewById(R.id.date);
+        Calendar calendar = Calendar.getInstance();
+        String current_date = DateFormat.getDateInstance().format(calendar.getTime());
+        text.setText(current_date);
         //  Button log_in = (Button) findViewById(R.id.login);
         Intent stress;
         stress = new Intent(Main_page.this, Stresslevel.class);
