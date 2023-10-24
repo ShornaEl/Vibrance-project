@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/img"
+    android:background="@drawable/rectanglebackgroun"
     android:textAlignment="center"
     tools:context=".MainActivity">
 
@@ -15,10 +15,11 @@
         android:layout_below="@id/login"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="-24dp"
+        android:layout_marginTop="0dp"
         android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp"
-        android:backgroundTint="@color/cardview_dark_background"
+        android:layout_marginBottom="0dp"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/cardstart"
         android:text="SignUp" />
 
     <TextView
@@ -63,12 +64,15 @@
         android:id="@+id/login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Login"
         android:layout_below="@id/password"
         android:layout_centerHorizontal="true"
-        android:layout_margin="20dp"
-        android:backgroundTint="@color/cardview_dark_background"
-        />
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="5dp"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/cardstart"
+        android:text="Login" />
 
 
 </RelativeLayout>
