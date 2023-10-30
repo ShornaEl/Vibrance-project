@@ -26,7 +26,7 @@
         android:id="@+id/username"
         android:layout_below="@id/signin"
         android:background = "#10ff"
-        android:hint="Username"
+        android:hint="Email"
         android:textColorHint="@color/white"
         android:layout_margin="5dp"
         android:padding="20dp"
