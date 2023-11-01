@@ -1,11 +1,18 @@
 package com.example.vibrance;
 
 public class User {
-    String message,date;
+    String date,message;
     public User(){}
-    public User(String message,String date) {
+    public User(String date,String message) {
         this.message = message;
         this.date =date;
+    }
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
     }
 
     public String getMessage() {
@@ -16,11 +23,5 @@ public class User {
         this.message = message;
     }
 
-    public String getDate() {
-        return date;
-    }
 
-    public void setDate(String date) {
-        this.date = date;
-    }
 }

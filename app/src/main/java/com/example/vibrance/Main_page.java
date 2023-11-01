@@ -31,18 +31,18 @@ public class Main_page extends AppCompatActivity {
         Calendar calendar = Calendar.getInstance();
         String current_date = DateFormat.getDateInstance().format(calendar.getTime());
         text.setText(current_date);
-        Intent fousresult = new Intent(Main_page.this,Recycleview.class);
+       // Intent fousresult = new Intent(Main_page.this,Recycleview.class);
         //  Button log_in = (Button) findViewById(R.id.login);
         Intent stress;
         stress = new Intent(Main_page.this, Stresslevel.class);
         Intent login_dashboard;
         //  login_dashboard = new Intent(MainActivity.this, splashscreen.class);
-        focus_result.setOnClickListener(new View.OnClickListener() {
+      /*  focus_result.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(fousresult);
             }
-        });
+        });*/
         stress_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
