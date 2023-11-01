@@ -44,7 +44,7 @@ public class focuslevel2 extends AppCompatActivity {
 //get value through intent
         Intent i = getIntent();
         int focusLevel = i.getIntExtra("IntValue",0);
-
+        int happinesslevel = i.getIntExtra("Happiness",0);
         String message = "Focuslevel: " + focusLevel;
 
         text.setText(message);

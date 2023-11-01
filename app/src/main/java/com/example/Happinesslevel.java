@@ -25,7 +25,7 @@ public class Happinesslevel extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 int x = calculateFocusLevel();
-                intent.putExtra("IntValue",x);
+                intent.putExtra("Happiness",x);
                 startActivity(intent);
             }
         });
@@ -42,13 +42,13 @@ public class Happinesslevel extends AppCompatActivity {
         if (question1SelectedId != -1) {
             RadioButton question1SelectedRadioButton = findViewById(question1SelectedId);
             if (question1SelectedRadioButton.getText().equals("Never")) {
-                focusLevel += 13;
+                focusLevel += 4;
             }
             else if (question1SelectedRadioButton.getText().equals("Sometimes")) {
                 focusLevel += 8;
             }
             else{
-                focusLevel += 3;
+                focusLevel += 13;
             }
         }
         //Question2
@@ -60,7 +60,7 @@ public class Happinesslevel extends AppCompatActivity {
                 focusLevel += 3;
             }
             else if (question2SelectedRadioButton.getText().equals("Sometimes")) {
-                focusLevel += 6;
+                focusLevel += 7;
             }
             else{
                 focusLevel += 12;
@@ -72,10 +72,10 @@ public class Happinesslevel extends AppCompatActivity {
         if (question3SelectedId != -1) {
             RadioButton question3SelectedRadioButton = findViewById(question3SelectedId);
             if (question3SelectedRadioButton.getText().equals("Never")) {
-                focusLevel += 3;
+                focusLevel += 5;
             }
             else if (question3SelectedRadioButton.getText().equals("Sometimes")) {
-                focusLevel += 7;
+                focusLevel += 9;
             }
             else{
                 focusLevel += 13;
@@ -86,13 +86,13 @@ public class Happinesslevel extends AppCompatActivity {
         if (question4SelectedId != -1) {
             RadioButton question4SelectedRadioButton = findViewById(question4SelectedId);
             if (question4SelectedRadioButton.getText().equals("Never")) {
-                focusLevel += 12;
+                focusLevel += 4;
             }
             else if (question4SelectedRadioButton.getText().equals("Sometimes")) {
-                focusLevel += 6;
+                focusLevel += 8;
             }
             else{
-                focusLevel += 3;
+                focusLevel += 12;
             }
         }
         RadioGroup question5RadioGroup = findViewById(R.id.question5RadioGroup);
@@ -117,10 +117,10 @@ public class Happinesslevel extends AppCompatActivity {
                 focusLevel += 4;
             }
             else if (question6SelectedRadioButton.getText().equals("Sometimes")) {
-                focusLevel += 6;
+                focusLevel += 8;
             }
             else{
-                focusLevel += 13;
+                focusLevel += 12;
             }
         }
         RadioGroup question7RadioGroup = findViewById(R.id.question7RadioGroup);
@@ -128,13 +128,13 @@ public class Happinesslevel extends AppCompatActivity {
         if (question7SelectedId != -1) {
             RadioButton question7SelectedRadioButton = findViewById(question7SelectedId);
             if (question7SelectedRadioButton.getText().equals("Never")) {
-                focusLevel += 12;
+                focusLevel += 4;
             }
             else if (question7SelectedRadioButton.getText().equals("Sometimes")) {
-                focusLevel += 6;
+                focusLevel += 8;
             }
             else{
-                focusLevel += 4;
+                focusLevel += 13;
             }
         }
         RadioGroup question8RadioGroup = findViewById(R.id.question8RadioGroup);
@@ -145,10 +145,10 @@ public class Happinesslevel extends AppCompatActivity {
                 focusLevel += 4;
             }
             else if (question8SelectedRadioButton.getText().equals("Sometimes")) {
-                focusLevel += 7;
+                focusLevel += 9;
             }
             else{
-                focusLevel += 13;
+                focusLevel += 12;
             }
         }
         return focusLevel;

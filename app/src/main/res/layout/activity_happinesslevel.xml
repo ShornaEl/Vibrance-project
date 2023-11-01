@@ -20,7 +20,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="31dp"
-            android:text="Focus Test"
+            android:text="Mood Test"
             android:textColor="@color/white"
             android:textSize="35sp"
             android:textStyle="bold"
@@ -65,7 +65,7 @@
                     android:layout_marginTop="16dp"
                     android:layout_marginEnd="16dp"
                     android:layout_marginBottom="16dp"
-                    android:text="  1) Are you easily distracted by external noises or movements around you?"
+                    android:text="1)Do o think you have something in your life in your which is very much valuable to you?"
                     android:textColor="@color/white"
                     android:textSize="20sp" />
 
@@ -131,7 +131,7 @@
                     android:layout_marginTop="16dp"
                     android:layout_marginEnd="16dp"
                     android:layout_marginBottom="16dp"
-                    android:text="2)Can you maintain your attention on a single task for an extended period?"
+                    android:text="2)How often your relation go well to your close one ?"
                     android:textColor="@color/white"
                     android:textSize="20sp" />
 
@@ -195,7 +195,7 @@
                     android:layout_marginTop="16dp"
                     android:layout_marginEnd="16dp"
                     android:layout_marginBottom="16dp"
-                    android:text=" 3)Do you complete tasks or assignments without getting sidetracked?"
+                    android:text=" 3)How often are you involving in activities that give you a sense of accomplishment and purpose?"
                     android:textColor="@color/white"
                     android:textSize="20sp" />
 
@@ -259,7 +259,7 @@
                     android:layout_marginTop="16dp"
                     android:layout_marginEnd="16dp"
                     android:layout_marginBottom="16dp"
-                    android:text=" 4)Do you feel a sense of accomplishment after concentrating on a task for a while?"
+                    android:text=" 4)Do you sleep properly everynight?"
                     android:textColor="@color/white"
                     android:textSize="20sp" />
 
@@ -323,7 +323,7 @@
                     android:layout_marginTop="16dp"
                     android:layout_marginEnd="16dp"
                     android:layout_marginBottom="16dp"
-                    android:text=" 5)Is it common for you to daydream or lose track of what you're doing?"
+                    android:text=" 5)Do you think in a positive way when something unpleasent happens to you?"
                     android:textColor="@color/white"
                     android:textSize="20sp" />
 
@@ -386,7 +386,7 @@
                     android:layout_marginTop="12dp"
                     android:layout_marginEnd="12dp"
                     android:layout_marginBottom="12dp"
-                    android:text="6)Do you use time management techniques to stay on track with your tasks?"
+                    android:text="6)Do you talk to your family members or close one when you feel sad or down?"
                     android:textColor="@color/white"
                     android:textSize="20sp" />
 
@@ -450,7 +450,7 @@
                     android:layout_marginTop="16dp"
                     android:layout_marginEnd="16dp"
                     android:layout_marginBottom="16dp"
-                    android:text=" 7)Do you often check your phone or social media while trying to work?"
+                    android:text=" 7)Do you engage in activities that bring you joy and a sense of purpose on a regular basis?"
                     android:textColor="@color/white"
                     android:textSize="20sp" />
 
@@ -501,8 +501,8 @@
             app:layout_constraintTop_toBottomOf="@+id/cardview6">
 
             <RelativeLayout
-                android:layout_width="565dp"
-                android:layout_height="169dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:background="@drawable/cardviewquestion">
 
                 <TextView
@@ -513,7 +513,7 @@
                     android:layout_marginTop="16dp"
                     android:layout_marginEnd="16dp"
                     android:layout_marginBottom="16dp"
-                    android:text=" 8)Are you able to ignore background noise or other disruptions when you need to focus?"
+                    android:text=" 8)Are you satisfied with your current life situation and the progress you're making toward your goals and aspirations?"
                     android:textColor="@color/white"
                     android:textSize="20sp" />
 
