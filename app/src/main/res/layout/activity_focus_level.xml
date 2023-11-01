@@ -15,6 +15,20 @@
         tools:context="com.example.Focus_level">
 
 
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="31dp"
+            android:text="Focus Test"
+            android:textColor="@color/white"
+            android:textSize="35sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/cardView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <Button
             android:id="@+id/submit_btn"
             android:layout_width="match_parent"
@@ -30,13 +44,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="50dp"
             android:layout_marginEnd="10dp"
+            android:layout_marginBottom="5dp"
             app:cardCornerRadius="20dp"
             app:cardElevation="50dp"
+            app:layout_constraintBottom_toTopOf="@+id/cardview1"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintStart_toStartOf="parent">
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -47,7 +61,11 @@
                     android:id="@+id/question1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="  1) Are you easily distracted by external\n  noises or movements around you?"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="  1) Are you easily distracted by external noises or movements around you?"
                     android:textColor="@color/white"
                     android:textSize="20sp" />
 
@@ -59,18 +77,26 @@
                     android:layout_marginTop="0dp">
 
                     <RadioButton
-                        android:id="@+id/question1Yes"
+                        android:id="@+id/question1Never"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Yes"
+                        android:text="Never"
                         android:textColor="@color/white"
                         android:textSize="20sp" />
 
                     <RadioButton
-                        android:id="@+id/question1No"
+                        android:id="@+id/question1Sometimes"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="No"
+                        android:text="Sometimes"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/question1Often"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Often"
                         android:textColor="@color/white"
                         android:textSize="20sp" />
                 </RadioGroup>
@@ -117,18 +143,25 @@
                     android:layout_marginTop="0dp">
 
                     <RadioButton
-                        android:id="@+id/question2Yes"
+                        android:id="@+id/question2Never"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Yes"
+                        android:text="Never"
                         android:textColor="@color/white"
                         android:textSize="20sp" />
 
                     <RadioButton
-                        android:id="@+id/question2No"
-                        android:layout_width="176dp"
+                        android:id="@+id/question2Sometimes"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="No"
+                        android:text="Sometimes"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+                    <RadioButton
+                        android:id="@+id/question2Often"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Often"
                         android:textColor="@color/white"
                         android:textSize="20sp" />
                 </RadioGroup>
@@ -174,18 +207,25 @@
                     android:layout_marginTop="0dp">
 
                     <RadioButton
-                        android:id="@+id/question3Yes"
+                        android:id="@+id/question3Never"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Yes"
+                        android:text="Never"
                         android:textColor="@color/white"
                         android:textSize="20sp" />
 
                     <RadioButton
-                        android:id="@+id/question3No"
+                        android:id="@+id/question3Somtimes"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="No"
+                        android:text="Sometimes"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+                    <RadioButton
+                        android:id="@+id/question3Often"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Often"
                         android:textColor="@color/white"
                         android:textSize="20sp" />
                 </RadioGroup>
@@ -228,21 +268,28 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/question4"
-                    android:layout_marginTop="8dp">
+                    android:layout_marginTop="0dp">
 
                     <RadioButton
-                        android:id="@+id/question4Yes"
+                        android:id="@+id/question4Never"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Yes"
+                        android:text="Never"
                         android:textColor="@color/white"
                         android:textSize="20sp" />
 
                     <RadioButton
-                        android:id="@+id/question4No"
+                        android:id="@+id/question4Somtimes"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="No"
+                        android:text="Sometimes"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+                    <RadioButton
+                        android:id="@+id/question4Often"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Often"
                         android:textColor="@color/white"
                         android:textSize="20sp" />
                 </RadioGroup>
@@ -288,22 +335,28 @@
                     android:layout_marginTop="0dp">
 
                     <RadioButton
-                        android:id="@+id/question5Yes"
+                        android:id="@+id/question5Never"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Yes"
+                        android:text="Never"
                         android:textColor="@color/white"
                         android:textSize="20sp" />
 
                     <RadioButton
-                        android:id="@+id/question5No"
+                        android:id="@+id/question5Somtimes"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="No"
+                        android:text="Sometimes"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+                    <RadioButton
+                        android:id="@+id/question5Often"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Often"
                         android:textColor="@color/white"
                         android:textSize="20sp" />
                 </RadioGroup>
-
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
 
@@ -345,22 +398,28 @@
                     android:layout_marginTop="0dp">
 
                     <RadioButton
-                        android:id="@+id/question6Yes"
+                        android:id="@+id/question6Never"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Yes"
+                        android:text="Never"
                         android:textColor="@color/white"
                         android:textSize="20sp" />
 
                     <RadioButton
-                        android:id="@+id/question6No"
+                        android:id="@+id/question6Somtimes"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="No"
+                        android:text="Sometimes"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+                    <RadioButton
+                        android:id="@+id/question6Often"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Often"
                         android:textColor="@color/white"
                         android:textSize="20sp" />
                 </RadioGroup>
-
 
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
@@ -403,22 +462,28 @@
                     android:layout_marginTop="0dp">
 
                     <RadioButton
-                        android:id="@+id/question7Yes"
+                        android:id="@+id/question7Never"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Yes"
+                        android:text="Never"
                         android:textColor="@color/white"
                         android:textSize="20sp" />
 
                     <RadioButton
-                        android:id="@+id/question7No"
+                        android:id="@+id/question7Somtimes"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="No"
+                        android:text="Sometimes"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+                    <RadioButton
+                        android:id="@+id/question7Often"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Often"
                         android:textColor="@color/white"
                         android:textSize="20sp" />
                 </RadioGroup>
-
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
 
@@ -436,8 +501,8 @@
             app:layout_constraintTop_toBottomOf="@+id/cardview6">
 
             <RelativeLayout
-                android:layout_width="565dp"
-                android:layout_height="169dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:background="@drawable/cardviewquestion">
 
                 <TextView
@@ -460,18 +525,25 @@
                     android:layout_marginTop="0dp">
 
                     <RadioButton
-                        android:id="@+id/question8Yes"
+                        android:id="@+id/question8Never"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Yes"
+                        android:text="Never"
                         android:textColor="@color/white"
                         android:textSize="20sp" />
 
                     <RadioButton
-                        android:id="@+id/question8No"
+                        android:id="@+id/question8Sometimes"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="No"
+                        android:text="Sometimes"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+                    <RadioButton
+                        android:id="@+id/question8Often"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Often"
                         android:textColor="@color/white"
                         android:textSize="20sp" />
                 </RadioGroup>

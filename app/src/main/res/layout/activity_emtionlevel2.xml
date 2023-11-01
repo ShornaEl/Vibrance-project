@@ -1,137 +1,485 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.example.Emtionlevel2">
-    <TextView
-        android:id="@+id/question1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Are you generally satisfied with your life right now?"
-        android:textSize="16sp" />
+    android:layout_height="wrap_content"
+    android:fillViewport="true"
+    >
 
-    <RadioGroup
-        android:id="@+id/question1RadioGroup"
-        android:layout_width="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/question1"
-        android:layout_marginTop="8dp">
+        android:background="@drawable/rectanglebackgroun"
+        tools:context="com.example.Focus_level">
 
-        <RadioButton
-            android:id="@+id/question1Yes"
-            android:layout_width="wrap_content"
+
+        <Button
+            android:id="@+id/submit_btn"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Yes" />
+            android:layout_marginTop="5dp"
+            android:text="Submit"
+            app:layout_constraintEnd_toEndOf="@id/cardview7"
+            app:layout_constraintStart_toEndOf="@+id/cardview7"
+            app:layout_constraintTop_toBottomOf="@id/cardview7" />
 
-        <RadioButton
-            android:id="@+id/question1No"
-            android:layout_width="wrap_content"
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="No" />
-    </RadioGroup>
-    <TextView
-        android:id="@+id/question2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Did something specific trigger your current emotional state?"
-        android:textSize="16sp"
-        android:layout_below="@id/question1RadioGroup"
-        android:layout_margin="16dp"/>
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="10dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-    <RadioGroup
-        android:id="@+id/question2RadioGroup"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/question2"
-        android:layout_marginTop="8dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/cardviewquestion">
 
-        <RadioButton
-            android:id="@+id/question2Yes"
-            android:layout_width="wrap_content"
+                <TextView
+                    android:id="@+id/question1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="  1) Are you easily distracted by external\n  noises or movements around you?"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+                <RadioGroup
+                    android:id="@+id/question1RadioGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/question1"
+                    android:layout_marginTop="0dp">
+
+                    <RadioButton
+                        android:id="@+id/question1Yes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Yes"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/question1No"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="No"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+                </RadioGroup>
+
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardview1"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Yes" />
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView">
 
-        <RadioButton
-            android:id="@+id/question2No"
-            android:layout_width="wrap_content"
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/cardviewquestion">
+
+                <TextView
+                    android:id="@+id/question2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="2)Can you maintain your attention on a single task for an extended period?"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+                <RadioGroup
+                    android:id="@+id/question2RadioGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/question2"
+                    android:layout_marginTop="0dp">
+
+                    <RadioButton
+                        android:id="@+id/question2Yes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Yes"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/question2No"
+                        android:layout_width="176dp"
+                        android:layout_height="wrap_content"
+                        android:text="No"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+                </RadioGroup>
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardview2"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="No" />
-    </RadioGroup>
-    <TextView
-        android:id="@+id/question3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Have you feeling overwhelmed by emtions recently?"
-        android:textSize="16sp"
-        android:layout_below="@id/question2RadioGroup"
-        android:layout_margin="16dp"/>
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardview1">
 
-    <RadioGroup
-        android:id="@+id/question3RadioGroup"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/question3"
-        android:layout_marginTop="8dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/cardviewquestion">
 
-        <RadioButton
-            android:id="@+id/question3Yes"
-            android:layout_width="wrap_content"
+                <TextView
+                    android:id="@+id/question3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:text=" 3)Do you complete tasks or assignments without getting sidetracked?"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+                <RadioGroup
+                    android:id="@+id/question3RadioGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/question3"
+                    android:layout_marginTop="0dp">
+
+                    <RadioButton
+                        android:id="@+id/question3Yes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Yes"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/question3No"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="No"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+                </RadioGroup>
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardview3"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Yes" />
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardview2">
 
-        <RadioButton
-            android:id="@+id/question3No"
-            android:layout_width="wrap_content"
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/cardviewquestion">
+
+                <TextView
+                    android:id="@+id/question4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:text=" 4)Do you feel a sense of accomplishment after concentrating on a task for a while?"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+                <RadioGroup
+                    android:id="@+id/question4RadioGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/question4"
+                    android:layout_marginTop="8dp">
+
+                    <RadioButton
+                        android:id="@+id/question4Yes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Yes"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/question4No"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="No"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+                </RadioGroup>
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardview4"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="No" />
-    </RadioGroup>
-    <TextView
-        android:id="@+id/question4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Do you always overthink with the relation  you emotionally connected?"
-        android:textSize="16sp"
-        android:layout_below="@id/question3RadioGroup"
-        android:layout_margin="16dp"/>
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardview3">
 
-    <RadioGroup
-        android:id="@+id/question4RadioGroup"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/question4"
-        android:layout_marginTop="8dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/cardviewquestion">
 
-        <RadioButton
-            android:id="@+id/question4Yes"
-            android:layout_width="wrap_content"
+                <TextView
+                    android:id="@+id/question5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:text=" 5)Is it common for you to daydream or lose track of what you're doing?"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+                <RadioGroup
+                    android:id="@+id/question5RadioGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/question5"
+                    android:layout_marginTop="0dp">
+
+                    <RadioButton
+                        android:id="@+id/question5Yes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Yes"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/question5No"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="No"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+                </RadioGroup>
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardview5"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Yes" />
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardview4">
 
-        <RadioButton
-            android:id="@+id/question4No"
-            android:layout_width="wrap_content"
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/cardviewquestion">
+
+                <TextView
+                    android:id="@+id/question6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginBottom="12dp"
+                    android:text="6)Do you use time management techniques to stay on track with your tasks?"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+                <RadioGroup
+                    android:id="@+id/question6RadioGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/question6"
+                    android:layout_marginTop="0dp">
+
+                    <RadioButton
+                        android:id="@+id/question6Yes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Yes"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/question6No"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="No"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+                </RadioGroup>
+
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardview6"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="No" />
-    </RadioGroup>
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardview5">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/cardviewquestion">
+
+                <TextView
+                    android:id="@+id/question7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:text=" 7)Do you often check your phone or social media while trying to work?"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+                <RadioGroup
+                    android:id="@+id/question7RadioGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/question7"
+                    android:layout_marginTop="0dp">
+
+                    <RadioButton
+                        android:id="@+id/question7Yes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Yes"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/question7No"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="No"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+                </RadioGroup>
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardview7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardview6">
+
+            <RelativeLayout
+                android:layout_width="565dp"
+                android:layout_height="169dp"
+                android:background="@drawable/cardviewquestion">
+
+                <TextView
+                    android:id="@+id/question8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:text=" 8)Are you able to ignore background noise or other disruptions when you need to focus?"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+                <RadioGroup
+                    android:id="@+id/question8RadioGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/question8"
+                    android:layout_marginTop="0dp">
+
+                    <RadioButton
+                        android:id="@+id/question8Yes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Yes"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/question8No"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="No"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+                </RadioGroup>
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
 
 
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-
-
-
-
-
-    <!-- Add more questions and radio buttons as needed -->
-
-    <Button
-        android:id="@+id/calculateButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/question4RadioGroup"
-        android:layout_marginTop="16dp"
-        android:text="Calculate Focus" />
-</RelativeLayout>
-
+</ScrollView>

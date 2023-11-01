@@ -18,17 +18,17 @@ public class Emtionlevel2 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_emtionlevel2);
-        Button calculateButton = findViewById(R.id.calculateButton);
+       /* Button calculateButton = findViewById(R.id.calculateButton);
         calculateButton.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View view) {
                 calculateEmotionLevel();
             }
         });
-    }
+    }*/
 
 
 
-    private void calculateEmotionLevel() {
+  /*  private void calculateEmotionLevel() {
 
         Intent i = getIntent();
         int focusLevel = i.getIntExtra("IntValue",0);
@@ -74,7 +74,7 @@ public class Emtionlevel2 extends AppCompatActivity {
 
         // Display the calculated stress level
         String message = "Your Emotion score: " + focusLevel;
-        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();*/
 
     }
 }

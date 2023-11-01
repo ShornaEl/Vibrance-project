@@ -82,6 +82,17 @@
             android:layout_height="match_parent"
             android:background="@drawable/gradientcard">
 
+            <TextView
+                android:id="@+id/focus_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="Test result"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toTopOf="@+id/focus_btn"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
             <Button
                 android:id="@+id/focus_btn"
                 android:layout_width="match_parent"

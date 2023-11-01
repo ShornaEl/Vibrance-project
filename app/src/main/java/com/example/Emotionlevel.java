@@ -18,9 +18,9 @@ public class Emotionlevel extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_emotionlevel);
-        Button calculateButton = findViewById(R.id.calculateButton);
+        Button submit_btn = findViewById(R.id.submit_btn);
         Intent intent = new Intent(Emotionlevel.this, Emtionlevel2.class);
-        calculateButton.setOnClickListener(new View.OnClickListener() {
+        submit_btn.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
@@ -42,8 +42,14 @@ public class Emotionlevel extends AppCompatActivity {
         int question1SelectedId = question1RadioGroup.getCheckedRadioButtonId();
         if (question1SelectedId != -1) {
             RadioButton question1SelectedRadioButton = findViewById(question1SelectedId);
-            if (question1SelectedRadioButton.getText().equals("No")) {
-                focusLevel += 1;
+            if (question1SelectedRadioButton.getText().equals("Never")) {
+                focusLevel += 4;
+            }
+            else if (question1SelectedRadioButton.getText().equals("Sometimes")) {
+                focusLevel += 7;
+            }
+            else{
+                focusLevel += 12;
             }
         }
         //Question2
@@ -51,24 +57,99 @@ public class Emotionlevel extends AppCompatActivity {
         int question2SelectedId = question2RadioGroup.getCheckedRadioButtonId();
         if (question2SelectedId != -1) {
             RadioButton question2SelectedRadioButton = findViewById(question2SelectedId);
-            if (question2SelectedRadioButton.getText().equals("Yes")) {
-                focusLevel += 1;
+            if (question2SelectedRadioButton.getText().equals("Never")) {
+                focusLevel += 13;
+            }
+            else if (question2SelectedRadioButton.getText().equals("Sometimes")) {
+                focusLevel += 8;
+            }
+            else{
+                focusLevel += 4;
             }
         }
+        //Question3
         RadioGroup question3RadioGroup = findViewById(R.id.question3RadioGroup);
         int question3SelectedId = question3RadioGroup.getCheckedRadioButtonId();
         if (question3SelectedId != -1) {
             RadioButton question3SelectedRadioButton = findViewById(question3SelectedId);
-            if (question3SelectedRadioButton.getText().equals("Yes")) {
-                focusLevel += 1;
+            if (question3SelectedRadioButton.getText().equals("Never")) {
+                focusLevel += 3;
+            }
+            else if (question3SelectedRadioButton.getText().equals("Sometimes")) {
+                focusLevel += 8;
+            }
+            else{
+                focusLevel += 12;
             }
         }
         RadioGroup question4RadioGroup = findViewById(R.id.question4RadioGroup);
         int question4SelectedId = question4RadioGroup.getCheckedRadioButtonId();
         if (question4SelectedId != -1) {
             RadioButton question4SelectedRadioButton = findViewById(question4SelectedId);
-            if (question4SelectedRadioButton.getText().equals("No")) {
-                focusLevel += 1;
+            if (question4SelectedRadioButton.getText().equals("Never")) {
+                focusLevel += 4;
+            }
+            else if (question4SelectedRadioButton.getText().equals("Sometimes")) {
+                focusLevel += 6;
+            }
+            else{
+                focusLevel += 13;
+            }
+        }
+        RadioGroup question5RadioGroup = findViewById(R.id.question5RadioGroup);
+        int question5SelectedId = question5RadioGroup.getCheckedRadioButtonId();
+        if (question5SelectedId != -1) {
+            RadioButton question5SelectedRadioButton = findViewById(question5SelectedId);
+            if (question5SelectedRadioButton.getText().equals("Never")) {
+                focusLevel += 3;
+            }
+            else if (question5SelectedRadioButton.getText().equals("Sometimes")) {
+                focusLevel += 7;
+            }
+            else{
+                focusLevel += 12;
+            }
+        }
+        RadioGroup question6RadioGroup = findViewById(R.id.question6RadioGroup);
+        int question6SelectedId = question6RadioGroup.getCheckedRadioButtonId();
+        if (question6SelectedId != -1) {
+            RadioButton question6SelectedRadioButton = findViewById(question6SelectedId);
+            if (question6SelectedRadioButton.getText().equals("Never")) {
+                focusLevel += 4;
+            }
+            else if (question6SelectedRadioButton.getText().equals("Sometimes")) {
+                focusLevel += 9;
+            }
+            else{
+                focusLevel += 13;
+            }
+        }
+        RadioGroup question7RadioGroup = findViewById(R.id.question7RadioGroup);
+        int question7SelectedId = question7RadioGroup.getCheckedRadioButtonId();
+        if (question7SelectedId != -1) {
+            RadioButton question7SelectedRadioButton = findViewById(question7SelectedId);
+            if (question7SelectedRadioButton.getText().equals("Never")) {
+                focusLevel += 12;
+            }
+            else if (question7SelectedRadioButton.getText().equals("Sometimes")) {
+                focusLevel += 9;
+            }
+            else{
+                focusLevel += 4;
+            }
+        }
+        RadioGroup question8RadioGroup = findViewById(R.id.question8RadioGroup);
+        int question8SelectedId = question8RadioGroup.getCheckedRadioButtonId();
+        if (question8SelectedId != -1) {
+            RadioButton question8SelectedRadioButton = findViewById(question8SelectedId);
+            if (question8SelectedRadioButton.getText().equals("Never")) {
+                focusLevel += 4;
+            }
+            else if (question8SelectedRadioButton.getText().equals("Sometimes")) {
+                focusLevel += 9;
+            }
+            else{
+                focusLevel += 13;
             }
         }
         return focusLevel;

@@ -1,77 +1,558 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="16dp"
-    tools:context=".MainActivity">
+    android:layout_height="wrap_content"
+    android:fillViewport="true"
+    >
 
-    <!-- Question 1 -->
-    <TextView
-        android:id="@+id/question1"
-        android:layout_width="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Do you feel overwhelmed by your daily responsibilities?"
-        android:textSize="16sp" />
+        android:background="@drawable/rectanglebackgroun"
+        tools:context="com.example.Stresslevel">
 
-    <RadioGroup
-        android:id="@+id/question1RadioGroup"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/question1"
-        android:layout_marginTop="8dp">
 
-        <RadioButton
-            android:id="@+id/question1Yes"
+        <TextView
+            android:id="@+id/textView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Yes" />
+            android:layout_marginBottom="31dp"
+            android:text="Emotion Test"
+            android:textColor="@color/white"
+            android:textSize="35sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/cardView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <RadioButton
-            android:id="@+id/question1No"
-            android:layout_width="wrap_content"
+        <Button
+            android:id="@+id/submit_btn"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="No" />
-    </RadioGroup>
-    <TextView
-        android:id="@+id/question2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Do you have trouble falling asleep or staying asleep due to worrying thoughts or anxiety?"
-        android:textSize="16sp"
-        android:layout_below="@id/question1RadioGroup"
-        android:layout_margin="16dp"/>
+            android:layout_marginTop="5dp"
+            android:text="Submit"
+            app:layout_constraintEnd_toEndOf="@id/cardview7"
+            app:layout_constraintStart_toEndOf="@+id/cardview7"
+            app:layout_constraintTop_toBottomOf="@id/cardview7" />
 
-    <RadioGroup
-        android:id="@+id/question2RadioGroup"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/question2"
-        android:layout_marginTop="8dp">
-
-        <RadioButton
-            android:id="@+id/question2Yes"
-            android:layout_width="wrap_content"
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Yes" />
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="5dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="50dp"
+            app:layout_constraintBottom_toTopOf="@+id/cardview1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
 
-        <RadioButton
-            android:id="@+id/question2No"
-            android:layout_width="wrap_content"
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/cardviewquestion">
+
+                <TextView
+                    android:id="@+id/question1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="  1) Do you always feel sense of purpose and meaning in your life?"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+                <RadioGroup
+                    android:id="@+id/question1RadioGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/question1"
+                    android:layout_marginTop="0dp">
+
+                    <RadioButton
+                        android:id="@+id/question1Never"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Never"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/question1Sometimes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sometimes"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/question1Often"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Often"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+                </RadioGroup>
+
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardview1"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="No" />
-    </RadioGroup>
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/cardviewquestion">
+
+                <TextView
+                    android:id="@+id/question2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="2)Do you generally feel confident and positive about your abilities and self-worth?
+"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+                <RadioGroup
+                    android:id="@+id/question2RadioGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/question2"
+                    android:layout_marginTop="0dp">
+
+                    <RadioButton
+                        android:id="@+id/question2Never"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Never"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/question2Sometimes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sometimes"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+                    <RadioButton
+                        android:id="@+id/question2Often"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Often"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+                </RadioGroup>
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardview2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardview1">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/cardviewquestion">
+
+                <TextView
+                    android:id="@+id/question3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="3)Do you hurt and feel crying if your friend or close one do not give attention to you?"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+                <RadioGroup
+                    android:id="@+id/question3RadioGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/question3"
+                    android:layout_marginTop="0dp">
+
+                    <RadioButton
+                        android:id="@+id/question3Never"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Never"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/question3Somtimes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sometimes"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+                    <RadioButton
+                        android:id="@+id/question3Often"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Often"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+                </RadioGroup>
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardview3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardview2">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/cardviewquestion">
+
+                <TextView
+                    android:id="@+id/question4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="4)Have you felt yourself isolated or lonly after social interactions or lately?"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+                <RadioGroup
+                    android:id="@+id/question4RadioGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/question4"
+                    android:layout_marginTop="0dp">
+
+                    <RadioButton
+                        android:id="@+id/question4Never"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Never"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/question4Somtimes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sometimes"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+                    <RadioButton
+                        android:id="@+id/question4Often"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Often"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+                </RadioGroup>
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardview4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardview3">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/cardviewquestion">
+
+                <TextView
+                    android:id="@+id/question5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:text=" 5)Do you find it challenging to control your temper or anger?"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+                <RadioGroup
+                    android:id="@+id/question5RadioGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/question5"
+                    android:layout_marginTop="0dp">
+
+                    <RadioButton
+                        android:id="@+id/question5Never"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Never"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/question5Somtimes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sometimes"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+                    <RadioButton
+                        android:id="@+id/question5Often"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Often"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+                </RadioGroup>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardview5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardview4">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/cardviewquestion">
+
+                <TextView
+                    android:id="@+id/question6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginBottom="12dp"
+                    android:text="6)Do you feel content and at peace with yourself and your surroundings?"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+                <RadioGroup
+                    android:id="@+id/question6RadioGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/question6"
+                    android:layout_marginTop="0dp">
+
+                    <RadioButton
+                        android:id="@+id/question6Never"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Never"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/question6Somtimes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sometimes"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+                    <RadioButton
+                        android:id="@+id/question6Often"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Often"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+                </RadioGroup>
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardview6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardview5">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/cardviewquestion">
+
+                <TextView
+                    android:id="@+id/question7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:text=" 7)Do you able to bounce back from setbacks and difficulties in your life?"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+                <RadioGroup
+                    android:id="@+id/question7RadioGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/question7"
+                    android:layout_marginTop="0dp">
+
+                    <RadioButton
+                        android:id="@+id/question7Never"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Never"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/question7Somtimes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sometimes"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+                    <RadioButton
+                        android:id="@+id/question7Often"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Often"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+                </RadioGroup>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardview7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardview6">
+
+            <RelativeLayout
+                android:layout_width="565dp"
+                android:layout_height="169dp"
+                android:background="@drawable/cardviewquestion">
+
+                <TextView
+                    android:id="@+id/question8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:text=" 8)Do you always feel sad or down?"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+                <RadioGroup
+                    android:id="@+id/question8RadioGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/question8"
+                    android:layout_marginTop="0dp">
+
+                    <RadioButton
+                        android:id="@+id/question8Never"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Never"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/question8Somtimes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sometimes"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+                    <RadioButton
+                        android:id="@+id/question8Often"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Often"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+                </RadioGroup>
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
 
 
-    <!-- Add more questions and radio buttons as needed -->
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <Button
-        android:id="@+id/calculateButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/question2RadioGroup"
-        android:layout_marginTop="16dp"
-        android:text="Calculate Stress Level" />
-</RelativeLayout>
+</ScrollView>
