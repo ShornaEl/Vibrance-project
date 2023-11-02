@@ -8,6 +8,19 @@
     android:backgroundTint="@color/bgcolor"
     tools:context=".Main_page">
 
+    <TextView
+        android:id="@+id/focus_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="Test result"
+        android:textColor="@color/white"
+        android:textColorHighlight="@color/black"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView7"
         android:layout_width="match_parent"
@@ -47,7 +60,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.285" />
+                app:layout_constraintVertical_bias="0.0" />
 
             <TextView
                 android:id="@+id/date"
@@ -82,16 +95,6 @@
             android:layout_height="match_parent"
             android:background="@drawable/gradientcard">
 
-            <TextView
-                android:id="@+id/focus_result"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="5dp"
-                android:text="Test result"
-                android:textColor="@color/white"
-                app:layout_constraintBottom_toTopOf="@+id/focus_btn"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
 
             <Button
                 android:id="@+id/focus_btn"
@@ -114,6 +117,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 

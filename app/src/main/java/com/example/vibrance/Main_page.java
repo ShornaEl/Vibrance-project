@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.example.Emotionlevel;
@@ -15,13 +16,20 @@ import com.example.Stresslevel;
 
 import java.text.DateFormat;
 import java.util.Calendar;
+import android.os.Handler;
 
 public class Main_page extends AppCompatActivity {
+    private ProgressBar progressBar;
+    private int progressStatus = 0;
+
+    private Handler handler = new Handler();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_page);
+
         TextView focus_result = findViewById(R.id.focus_result);
         Button stress_btn = (Button) findViewById(R.id.stress_btn);
          Button focus_btn = (Button) findViewById(R.id.focus_btn);
@@ -80,4 +88,31 @@ public class Main_page extends AppCompatActivity {
             }
         });
     }
+    private void startProgressBar() {
+        new Thread(new Runnable() {
+            public void run() {
+                while (progressStatus <50) {
+                    progressStatus += 1;
+                    handler.post(new Runnable() {
+                        public void run() {
+                            progressBar.setProgress(progressStatus);
+                        }
+                    });
+                    try {
+                        Thread.sleep(100); // You can adjust the sleep duration to control the speed.
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+
+                // When the desired value is reached, you can hide the ProgressBar.
+                runOnUiThread(new Runnable() {
+                    public void run() {
+                        progressBar.setVisibility(View.INVISIBLE);
+                    }
+                });
+            }
+        }).start();
+    }
+
 }

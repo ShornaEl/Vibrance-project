@@ -45,7 +45,9 @@ public class focuslevel2 extends AppCompatActivity {
         Intent i = getIntent();
         int focusLevel = i.getIntExtra("IntValue",0);
         int happinesslevel = i.getIntExtra("Happiness",0);
-        String message = "Focuslevel: " + focusLevel;
+        int emotion = i.getIntExtra("Stress",0);
+         int stress = i.getIntExtra("Emotion",0);
+        String message = "Focuslevel: " + focusLevel+"\nMood: " + happinesslevel+"\nEmotion: " + emotion+"\nStress: "+stress;
 
         text.setText(message);
         Calendar calendar = Calendar.getInstance();
