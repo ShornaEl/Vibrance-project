@@ -53,7 +53,7 @@
         android:id="@+id/password"
         android:layout_below="@id/username"
         android:background = "#10ff"
-        android:hint="Password"
+        android:hint="enter 8 characters password"
         android:textColorHint="@color/white"
         android:layout_margin="5dp"
         android:padding="20dp"
@@ -72,7 +72,8 @@
         android:layout_marginTop="5dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="5dp"
-        android:backgroundTint="@color/bgcolor"
+        android:background="@drawable/rectaglestrok"
+        android:backgroundTint="@color/cardview_shadow_end_color"
         android:text="Register" />
     <TextView
         android:id="@+id/clicklogin"

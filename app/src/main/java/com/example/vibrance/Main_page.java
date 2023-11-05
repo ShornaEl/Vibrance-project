@@ -31,24 +31,48 @@ public class Main_page extends AppCompatActivity {
         setContentView(R.layout.activity_main_page);
 
         TextView focus_result = findViewById(R.id.focus_result);
+        TextView emotion_result = findViewById(R.id.emotion_result);
+        TextView stress_result = findViewById(R.id.stress_result);
         Button stress_btn = (Button) findViewById(R.id.stress_btn);
          Button focus_btn = (Button) findViewById(R.id.focus_btn);
         Button emtion_btn = (Button) findViewById(R.id.emotion_btn);
         Button happines_btn = (Button) findViewById(R.id.happiness_btn);
+        Button happiness_result = (Button)findViewById(R.id.happiness_result);
+
+
         TextView text = findViewById(R.id.date);
         Calendar calendar = Calendar.getInstance();
         String current_date = DateFormat.getDateInstance().format(calendar.getTime());
         text.setText(current_date);
-       Intent fousresult = new Intent(Main_page.this,MainActivity2.class);
+        Intent focusresult = new Intent(Main_page.this,Focusrecycler.class);
+        Intent emotionresult = new Intent(Main_page.this,Emotionrecycler.class);
+        Intent stressresult = new Intent(Main_page.this,Stressrecycler.class);
+       Intent happinessresult = new Intent(Main_page.this,MainActivity2.class);
         //  Button log_in = (Button) findViewById(R.id.login);
         Intent stress;
         stress = new Intent(Main_page.this, Stresslevel.class);
-        Intent login_dashboard;
-        //  login_dashboard = new Intent(MainActivity.this, splashscreen.class);
+        emotion_result.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(emotionresult);
+            }
+        });
+        stress_result.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(stressresult);
+            }
+        });
+       happiness_result.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View view) {
+               startActivity(happinessresult);
+           }
+       });
        focus_result.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(fousresult);
+                startActivity(focusresult);
             }
         });
         stress_btn.setOnClickListener(new View.OnClickListener() {

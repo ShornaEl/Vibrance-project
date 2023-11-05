@@ -4,6 +4,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
@@ -25,7 +27,9 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.ViewHold
     public void onBindViewHolder(ViewHolder holder, int position) {
         Message message = messages.get(position);
         holder.textDate.setText(message.getDate());
+
         holder.textMessage.setText(message.getMessage());
+
     }
 
     @Override
@@ -36,11 +40,14 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.ViewHold
     public class ViewHolder extends RecyclerView.ViewHolder {
         public TextView textDate;
         public TextView textMessage;
+        public CardView card;
 
         public ViewHolder(View itemView) {
             super(itemView);
             textDate = itemView.findViewById(R.id.textDate);
             textMessage = itemView.findViewById(R.id.textMessage);
+
+
         }
     }
 }

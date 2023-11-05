@@ -18,7 +18,9 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
+import java.text.DateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 public class MainActivity2 extends AppCompatActivity {
@@ -43,31 +45,46 @@ public class MainActivity2 extends AppCompatActivity {
             // Get the authenticated current user
             FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
 
+
             if (currentUser != null) {
-                String userId = currentUser.getUid();
+                String uid = currentUser.getUid();
+                Calendar calendar = Calendar.getInstance();
+                String current_date = DateFormat.getDateInstance().format(calendar.getTime());
+
 
                 // Fetch data for the authenticated user
-                db.collection(userId)
+                db.collection("user")
+                        .document(uid)
+                        .collection(current_date)
+                        .document("Happinesslevel")
                         .get()
-                        .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                        .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
                             @Override
-                            public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
                                 if (task.isSuccessful()) {
-                                    userList.clear();
+                                    DocumentSnapshot document = task.getResult();
 
-                                    for (QueryDocumentSnapshot document : task.getResult()) {
-                                        // Deserialize Firestore data into a User object (you need to define the User class)
-                                        Message user = document.toObject(Message.class);
-                                        userList.add(user);
+                                    if (document.exists()) {
+                                        // Deserialize Firestore data into a Message object (you need to define the Message class)
+                                        Message message = document.toObject(Message.class);
+
+                                        if (message != null) {
+                                            userList.clear();
+                                            userList.add(message);
+                                            // Notify the adapter that the data has changed
+                                            adapter.notifyDataSetChanged();
+                                        } else {
+                                            Toast.makeText(MainActivity2.this, "Error parsing data", Toast.LENGTH_SHORT).show();
+                                        }
+                                    } else {
+                                        Toast.makeText(MainActivity2.this, "Document not found", Toast.LENGTH_SHORT).show();
                                     }
-
-                                    // Notify the adapter that the data has changed
-                                    adapter.notifyDataSetChanged();
                                 } else {
-                                    Toast.makeText(MainActivity2.this, "Error fetching user data", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(MainActivity2.this, "Error fetching data", Toast.LENGTH_SHORT).show();
                                 }
                             }
                         });
+
             } else {
                 // Handle the case where the user is not authenticated
                 // You may want to display a login screen or handle this differently

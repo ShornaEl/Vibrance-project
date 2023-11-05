@@ -10,6 +10,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
+import com.example.vibrance.Happinesslevel2;
 import com.example.vibrance.R;
 
 public class Happinesslevel extends AppCompatActivity {
@@ -19,7 +20,7 @@ public class Happinesslevel extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_happinesslevel);
         Button  submit_btn = findViewById(R.id. submit_btn);
-        Intent intent = new Intent(Happinesslevel.this, focuslevel2.class);
+        Intent intent = new Intent(Happinesslevel.this, Happinesslevel2.class);
         submit_btn.setOnClickListener(new View.OnClickListener() {
 
             @Override

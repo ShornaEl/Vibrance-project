@@ -1,16 +1,19 @@
 <!-- res/layout/item_message.xml -->
-<androidx.cardview.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/cardView"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="8dp"
+    app:cardElevation="70dp"
+    app:cardCornerRadius="20dp"
     android:elevation="4dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:background="@drawable/gradientcard"
         android:padding="16dp">
 
         <TextView
@@ -18,13 +21,19 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Date"
-            android:textSize="16sp"/>
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:textSize="25sp"/>
 
         <TextView
             android:id="@+id/textMessage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_gravity="center"
             android:text="Message"
-            android:textSize="14sp"/>
+            android:textSize="20sp"/>
+
     </LinearLayout>
 </androidx.cardview.widget.CardView>

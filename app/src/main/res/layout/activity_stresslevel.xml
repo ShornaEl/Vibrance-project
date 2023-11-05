@@ -65,7 +65,7 @@
                     android:layout_marginTop="16dp"
                     android:layout_marginEnd="16dp"
                     android:layout_marginBottom="16dp"
-                    android:text="Do you sleep properly everynight?"
+                    android:text="Do you sleep everynight properly?"
                     android:textColor="@color/white"
                     android:textSize="20sp" />
 

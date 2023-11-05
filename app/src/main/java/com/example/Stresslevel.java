@@ -11,6 +11,7 @@ import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import com.example.vibrance.R;
+import com.example.vibrance.Stresslevel2;
 
 public class Stresslevel extends AppCompatActivity {
 
@@ -19,7 +20,7 @@ public class Stresslevel extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_stresslevel);
         Button submit_btn = findViewById(R.id.submit_btn);
-        Intent intent = new Intent(Stresslevel.this, focuslevel2.class);
+        Intent intent = new Intent(Stresslevel.this, Stresslevel2.class);
         submit_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

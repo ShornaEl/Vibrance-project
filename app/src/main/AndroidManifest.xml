@@ -13,6 +13,21 @@
         android:theme="@style/Theme.LoginPage"
         tools:targetApi="31">
         <activity
+            android:name=".Stressrecycler"
+            android:exported="false" />
+        <activity
+            android:name=".Emotionrecycler"
+            android:exported="false" />
+        <activity
+            android:name=".Focusrecycler"
+            android:exported="false" />
+        <activity
+            android:name=".Stresslevel2"
+            android:exported="false" />
+        <activity
+            android:name=".Happinesslevel2"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity2"
             android:exported="false" />
         <activity

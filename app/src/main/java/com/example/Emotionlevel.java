@@ -19,7 +19,7 @@ public class Emotionlevel extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_emotionlevel);
         Button submit_btn = findViewById(R.id.submit_btn);
-        Intent intent = new Intent(Emotionlevel.this,focuslevel2.class);
+        Intent intent = new Intent(Emotionlevel.this,Emtionlevel2.class);
         submit_btn.setOnClickListener(new View.OnClickListener() {
 
             @Override
